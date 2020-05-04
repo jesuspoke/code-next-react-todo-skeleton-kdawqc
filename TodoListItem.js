@@ -11,6 +11,7 @@ export default class TodoListItem extends React.Component {
   onCheckboxChange(event) {
     // TODO(#18) Call this.props.onToggle with the todo ID.
     // hint: How can you access the todo ID?
+    
   }
 
   onRemoveClick(event) {

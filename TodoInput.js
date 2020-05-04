@@ -19,7 +19,7 @@ export default class TodoInput extends React.Component {
 
     // TODO(#8) Set the nextState.value to be
     // the event.target.value.
-
+    nextState.value = event.target.value;
     // Set the next state.
     this.setState(nextState);
   }
@@ -35,13 +35,17 @@ export default class TodoInput extends React.Component {
     }
 
     // TODO(#9) Call this.props.onEnter with this.state.value.
+    this.props.onEnter(this.state.value);
     
     // TODO(#10) Deep copy the state.
+    const nextState = cloneDeep(this.state);
 
     // TODO(#11) Update the state such that the user
     // does not have to manually backspace.
+    nextState.value = "";
 
     // TODO(#12) Set the next state.
+    this.setState(nextState)
   }
 
   componentDidMount() {
